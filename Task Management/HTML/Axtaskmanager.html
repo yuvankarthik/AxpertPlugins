@@ -1,0 +1,1787 @@
+HTML
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server">
+
+   <title>Task management</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../UI/axpertUI/style.bundle.css">
+   <link rel="stylesheet" href="../../UI/axpertUI/plugins.bundle.css">
+   <link rel="stylesheet" href="../../ThirdParty/jquery-confirm-master/jquery-confirm.min.css">	
+	
+	
+	<link type="text/css" rel="stylesheet" href="../../profit/HTMLPages/Css/taskmanager_1704186427275.css?v=1705645492509">
+	<link type="text/css" rel="stylesheet" href="../../agiledemo/HTMLPages/Css/taskmanager_1705649911521.css?v=1705649975078">
+</head>
+
+<body id="Taskmanagement_Body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed">
+   <div class="content d-flex flex-column flex-column-fluid ">
+      <div id="kt_content_container" class="">
+         <div class=" " id="Taskmanagement_Body-overalldiv">
+            <div id="Task_management_Wrapper" class="col-xl-12 col-md-12 d-flex flex-column flex-column-fluid vh-100 min-vh-100">
+               <div class="card card-flush h-lg-100  ">
+                  <div class="card-header">                     
+                        <div class="col-xl-12 col-md-12 d-flex flex-column flex-column-fluid Task_ID_Section  ">                           
+                              <div class="page-Header">
+                                 <h3 class="card-title collapsible cursor-pointer rotate" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#Task_ID_Details">
+                                    <span class="material-icons material-icons-style material-icons-2 rotate-180">
+                                       expand_circle_down
+                                    </span>
+                                    <span id="hdr_tasknumber">Ticket #NA</span>
+									 <span id="priorityBadge" class="badge badge-danger  badge-light-danger d-flex align-items-center me-3">
+									   <span class="material-icons material-icons-style material-icons-2 ">flag</span> </span>
+                                 </h3>
+                                 <div class="card-toolbar ">
+                                    <div class="d-flex ">
+                                       <!-- <button type="submit" id="" class="btn btn-icon btn-white btn-color-gray-600 btn-active-primary shadow-sm tb-btn btn-sm me-3"> -->
+                                          <!-- <span class="material-icons material-icons-style material-icons-2">group_add</span> -->
+                                       <!-- </button> -->
+                                       <!-- <button type="submit" id="" class="btn btn-icon btn-white btn-color-gray-600 btn-active-primary shadow-sm tb-btn btn-sm me-3"> -->
+                                          <!-- <span class="material-icons material-icons-style material-icons-2">filter_alt</span> -->
+                                       <!-- </button>                               -->
+                                       <!-- <span id="priorityBadge" class="badge badge-danger  badge-light-danger d-flex align-items-center me-3"></span> -->
+									   
+									  
+									   
+                                      
+                                      <span class="badge align-self-center" id="hdr_status">NA</span>
+									  
+                                      <!-- <a href="javascript:void(0);" onclick="fnRefresh()" style="padding:0.5rem !important;" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-0"> -->
+                                      <!-- <span class="material-icons material-icons-style material-icons-primary"> -->
+                                                        <!-- refresh -->
+                                                    <!-- </span>Refresh</a> -->
+										<button type="submit" onclick="fnRefresh()" title="refresh" class="btn btn-icon btn-white btn-color-gray-600 btn-active-primary shadow-sm tb-btn btn-sm ms-3">
+														 <span class="material-icons material-icons-style material-icons-2">refresh</span>
+														 </button>		
+													
+                                    </div>
+                                 </div>
+                              </div>                              
+                              <div class="collapse show" id="Task_ID_Details">                                 
+                                    <div class=" Ticket-details-row d-flex">
+                                      <label class="Ticket-Label"> 
+									  <!-- <span class="material-icons material-icons-style material-icons-2 text-danger">people</span> -->
+                                        Assigned on <span class="txt-bold" id="hdr_createdon"></span> by <span class="txt-bold" id="hdr_createdby"> </span></label>
+                                    
+									 <label class=" Ticket-Label"> 
+									 <!-- <span class="material-icons material-icons-style material-icons-2 text-danger">account_tree</span> -->
+									 <span id="hdr_department"></span>
+                                       </label>
+									   
+									   <label class="Ticket-Label"> 
+									   <!-- <span class="material-icons material-icons-style material-icons-2 text-danger">today</span> -->
+									   Expected
+                                          to complete by <span class="txt-bold" id="hdr_completiondate"></span></label>
+                                       <div class=" Ticket-Value">
+                                          <div class="symbol-group symbol-hover flex-nowrap" id="hdr_watchers">  
+                                             
+                                          </div>
+                                       </div>
+									   
+									</div>                                 
+                                   
+
+                                    <div class="row Task-details-wrap">                                    
+                                       <p class="task-description moretext" id="hdr_task_description">
+                                        NA
+										</p>
+                                      <a class="moreless-button" href="#">Read more</a>
+										<div id="Task-Header-Desc" class="Tasklog-toolbar-Right">
+														 <button type="submit" onclick="" class="btn btn-sm btn-icon btn-primary btn-active-primary btn-custom-border-radius">
+														 <span class="material-icons material-icons-style material-icons-2">edit</span>
+														 </button>
+														 <button type="submit" onclick="" class="btn btn-icon btn-white btn-color-gray-600 btn-active-primary shadow-sm tb-btn btn-sm">
+														 <span class="material-icons material-icons-style material-icons-2">reply</span>
+														 </button>
+														 <button type="submit" onclick="" class="btn btn-icon btn-white btn-color-gray-600 btn-active-primary shadow-sm  tb-btn btn-sm">
+														 <span class="material-icons material-icons-style material-icons-2" style="transform: scaleX(-1);">reply</span>
+														 </button>                                   
+													  </div>
+                                       
+										
+                                       <div class=" Files-Attached-Wrapper" id="dv_Files_Header">
+                                                                          
+                                       </div> 
+										
+										
+									   
+                                    </div>                               
+                              </div><b><b>
+                        </b></b></div><b><b>                   
+                  </b></b></div><b><b>
+                  <div class="card-body h-300px ">
+                     <div class="row" id="Task_Activity_log">
+                        <div class="timeline" id="body_Container">
+                           
+                        </div>
+                     </div>
+                  </div>
+               </b></b></div><b><b>
+            </b></b></div><b><b>
+         </b></b></div><b><b>
+      </b></b></div><b><b>
+	  
+	  <div class="modal fade" id="kt_modal_view_users" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" style="font-size:1.5rem !important;" id="exampleModalLabel">Activity Observers</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div id="modal_watchers"></div>
+					
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+      <script src="../../UI/axpertUI/plugins.bundle.js"></script>
+      <script src="../../UI/axpertUI/scripts.bundle.js"></script>
+      <script type="text/javascript" src="../../ThirdParty/jquery-confirm-master/jquery-confirm.min.js"></script>
+      <script type="text/javascript" src="../../Js/alerts.min.js"></script>
+      <script src="../../js/handlebars.js"></script>
+      <script src="../../js/common.js"></script>
+     <script src="../../AxpertAPIs/js/AxpertAPIs.js?v=1"></script>
+      <script>
+         $(document).ready(function () {
+            $("button.rotate").click(function () {
+               $(".task-activity-container").toggle();
+            });
+			
+            var showChar = 450;
+            var ellipsestext = "...";
+            var moretext = "Show more >";
+            var lesstext = "Show less";
+			
+            $('.moretext').each(function () {
+               var content = $(this).html();
+               if (content.length > showChar) {
+                  var c = content.substr(0, showChar);
+                  var h = content.substr(showChar, content.length - showChar);
+                  var html = c + '<span class="moreellipses">' + ellipsestext + ' </span><span class="morecontent"><span>' + h + '</span>  <a href="" class="morelink">' + moretext + '</a></span>';
+                  $(this).html(html);
+               }
+            });
+
+            $(".morelink").click(function () {
+               if ($(this).hasClass("less")) {
+                  $(this).removeClass("less");
+                  $(this).html(moretext);
+               } else {
+                  $(this).addClass("less");
+                  $(this).html(lesstext);
+               }
+               $(this).parent().prev().toggle();
+               $(this).prev().toggle();
+               return false;
+            });
+         });
+         function fnRefresh()
+		 {
+			location.reload(true);
+		 }
+      </script>
+
+</b></b></div><b><b>
+</b></b>
+  
+
+	
+
+	<script type="text/javascript" src="../../profit/HTMLPages/Js/tmplugin_1704186427275.js?v=1705645492510"></script>
+
+	<script type="text/javascript" src="../../agiledemo/HTMLPages/Js/tmplugin_1705649911521.js?v=1705649975081"></script>
+</body></html>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+taskmanager
+
+Css:
+
+@font-face {
+    font-family: 'Axp';
+    src: url('../fonts/Axp.eot');
+    src: url('../fonts/Axp.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Axp.woff2') format('woff2'),
+        url('../fonts/Axp.woff') format('woff'),
+        url('.Axp.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AxpM';
+    src: url('../fonts/AxpM.eot');
+    src: url('../fonts/AxpM.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AxpM.woff2') format('woff2'),
+        url('../fonts/AxpM.woff') format('woff'),
+        url('.AxpM.ttf') format('truetype');
+}
+
+body {
+	font-family: 'AxpM',sans-serif;
+	font-size: 15px !important;
+	color: #495057 !important;
+}
+
+
+.moretext {
+    max-height: 52px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.moreless-button {
+	display: none;
+	text-decoration: none;
+	font-size: 14px;
+	color: #1248e8 !important;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-family: AxpM;
+}
+           
+#Taskmanagement_Body .content {
+    padding-block: 0;
+    }
+    #Taskmanagement_Body-overalldiv {
+    width: 100vw;
+    }
+ #Task_management_Wrapper {
+    padding: 0;
+    }
+   #Task_management_Wrapper .card-header {
+    /*! background: #f8f9fa; */ 
+    min-height: auto;
+    padding: 5px 30px !important;
+    border-radius: 0 !important;
+    /* border-right: 1px solid #ededed; */
+    justify-content: space-between; display: flex;
+    }
+  #Task_management_Wrapper .card-title {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 0; margin-top:0;
+    }
+  
+ 
+    #Task_management_Wrapper .card-body {
+    padding: 1rem 2rem !important;
+    border: 1px solid #f3f3f3; /* overflow: scroll;*/
+    }
+  
+   
+    #Task_management_Wrapper .card-body {
+    padding: 0px !important;
+    }
+    /* .Task_ID_Section {
+    margin-bottom: 7px;
+    } */
+    .Task_ID_Section_details {
+    padding: 12px;
+    }
+    .Leave-Type {
+    font-weight: bold;
+    color: #434343;
+    }
+    .Leave-Count {
+    font-size: 20px;
+    font-weight: bold;
+    }
+    
+    #Taskmanagement_Body .text-warning {
+    color: #EB7900 !important;
+    }
+    #Taskmanagement_Body .material-icons {
+    font-family: "Material Icons Outlined";
+    font-size: 19px;
+    color: ;
+    }   
+    
+    
+    
+    
+    .Ticket-Label, .Ticket-Value {
+    /*! font-size: 1rem; */
+    /*! display: flex; */
+    /*! color: #495057 !important; */
+    /* font-weight: 510; */
+    padding-bottom: 2px;
+    margin-right: 25px;
+    }
+    .Ticket-Value {
+    font-weight: bold;
+    /* line-height: 3; */
+    display: flex;
+    /* align-items: end; */
+    }
+    .Ticket-Title {
+    padding-top: 6px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    }
+    #Tickets_details_view .card-header {
+    background: transparent;
+    border-bottom: 0;
+    }
+   .Ticket-details-row {
+	padding: 4px 0;
+	border-bottom: 1px dashed #dcdcdc;
+	padding-left: 35px;
+	margin-top: -10px !important;
+	width: 93%;
+	flex-wrap: wrap;
+}
+    .Ticket-details-row .material-icons {
+    position: relative;
+    top: 5px;
+    margin-right: 12px;
+    }
+    .Ticket-details-row .Ticket-Value .material-icons {
+    position: inherit;
+    margin-left: 16px;
+    }
+    #Tickets_details_view .card-header .material-icons, #Tickets_Desc_view .material-icons {
+    font-size: 27px !important;
+    width: 38px !important;
+    height: 38px !important;
+    position: relative;
+    top: 6px;
+    margin-right: 12px;
+    text-align: center;
+    }
+    
+    .Ticket-details-row p {
+    font-size: 1.1rem;
+    line-height: 26px;
+    }
+    #Tickets_details_view .card-body {
+    border: 0;
+    }
+    
+    .Ticket-Desc-Title {
+    display: flex;
+    padding: 5px 0 !important;
+    min-height: auto;
+    margin-top: 25px;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: bold;
+    }
+    .Ticket-Desc-row {
+    padding-left: 25px;
+    }
+    .Ticket-details-row p {
+    font-size: 1.1rem;
+    line-height: 26px;
+    font-weight: 510;
+    }
+    #Tickets_Desc_view .material-icons {
+    margin-right: 17px;
+    }
+    
+   
+    .Tkts-ttobar {
+    text-align: right;
+    border-bottom: 1px solid #f9f9f9;
+    margin-top: -9px;
+    padding-bottom: 9px;
+    }
+    
+    #ProcessFlow_New-container .nav.nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    #ProcessFlow_New-overalldiv .card {
+    box-shadow: none;
+    }
+    #ProcessFlow_New_Right {
+    border: 1px solid #f3f3f3;
+    border-width: 1px 0px 1px 0;
+    }
+    
+    #Task_management_Wrapper figure {
+    text-align: center;
+    }
+    #Tickets_Desc_view .Ticket-details-row {
+    border: 0;
+    }
+    
+    /* #Task_ID_Details .material-icons { */
+    /* color: #939393 !important; */
+    /* } */
+    
+    .card-title .material-icons {
+        margin-right: 15px;
+    }
+    
+    .card-footer.py-5.footer-legend {
+    border-bottom: 1px solid #eeeeef !important;
+    padding: 10 !important;
+    background: #f9f9fa;
+    }
+    
+    .footer-legend {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    border-right: 0;
+    border-radius: 0 !important;
+    }
+    
+    .legend-list {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    }
+    
+    .legend-list .symbol-circle {
+     margin-right: 6px;
+    }
+    
+    .legend-list .symbol .symbol-label {
+     width: 8px;
+     height: 8px;
+    }
+    
+    .symbol-label.bg-make, div[data-tasktype="Make"] .Task-process-list::before {
+    background: #4b6ecc;
+    }
+    
+    .symbol-label.bg-approved, div[data-tasktype="Approve"] .Task-process-list::before {
+    background: #5ac686;
+    }
+    
+    .symbol-label.bg-checked, div[data-tasktype="Check"] .Task-process-list::before {
+    background: #3d821b;
+    }
+    
+    .symbol-label.bg-If {
+    background: #ecab11;
+    }
+    
+    .symbol-label.bg-If-else {
+    background: #9823e5;
+    }
+    
+    .symbol-label.bg-Else {
+    background: #23d8e5;
+    }
+    
+    
+    
+    
+    
+    
+    .more-comments {
+    padding: 0 !important;
+    display: none !important;
+    }
+    .task-actions-sets:hover .more-comments {
+    display: block !important;
+    }
+    .task-actions-sets.d-flex:hover .more-comments {
+    display: block !important;
+    padding: 0 !important;
+    /*! margin-left: -11px; */
+    position: relative;
+    top: 0;
+    /*! border-right: 1px solid #ccc !important; */
+    border-radius: 0 !important;
+    margin-right: 0 !important;
+    /*! border-left: 1px solid #ccc !important; */
+    border-radius: 6px !important;
+    }
+    
+    .task-actions-sets.d-flex:hover .btn.me-2 {
+    margin-right: 0 !important;
+    }
+    .task-actions-sets .more-comments:first-child {
+    border-left: 0 !important;
+    }
+    .task-actions-sets.d-flex:hover .more-comments:first-child {
+    border-left: 0 !important;
+    }
+    .task-actions-sets.d-flex:hover {
+    /*! border: 1px solid #dcdcdc; */
+    border-radius: 5px;
+    box-shadow: 0 0 14px 2px #dbdbdb;
+    }
+    .comments-icons {
+    position: relative;
+    top: 5px;
+    /*! background: tra !important; */
+    }
+    
+    
+    /* horizontal stepper */
+    
+    #ProcessFlow_New_Right .stepper.stepper-horizontal {
+    padding: 0;
+    border-bottom: 1px solid #f9f9f9;
+    }
+    
+    /* ul.stepper {
+    overflow-x:hidden;
+    overflow-y:auto;
+    counter-reset:section;
+    } */
+    ul.stepper {
+    padding: 0 15px 5px 0;
+    margin-bottom: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    counter-reset: section;
+    /* border-bottom: 1px solid #EFF2F5; */
+    display: block ruby;
+    margin-right: 45px;
+    }
+    ul.stepper li {
+    height:-webkit-min-content;
+    height:-moz-min-content;
+    height:min-content;
+    }
+    ul.stepper li a {
+    padding:10px 11px;
+    text-align:center;
+    }
+    ul.stepper li a .circle {
+    display:inline-block;
+    width:1.75rem;
+    height:1.75rem;
+    margin-right:.5rem;
+    line-height:1.7rem;
+    color:#fff;
+    text-align:center;
+    background:rgba(0,0,0,0.38);
+    border-radius:50%
+    }
+    ul.stepper li a .label {
+    display:inline-block;
+    color:rgba(0,0,0,0.38); font-size: 12px;
+    }
+    ul.stepper li.active a .label,
+    ul.stepper li.completed a .label {
+    font-weight:600;
+    color:rgba(0,0,0,0.87)
+    }
+    .stepper-horizontal {
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    /*! display:flex; */
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between
+    }
+    .stepper-horizontal li {
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    /* -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1; */
+    -webkit-box-align:baseline;
+    -ms-flex-align:baseline;
+    align-items:baseline;
+    -webkit-transition:.5s;
+    transition:.5s
+    }
+    .stepper-horizontal li a .label {
+    margin-top:.63rem;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+    position:relative;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    height:1px;
+    margin:.5rem 0 0 0;
+    content:"";
+    background-color:rgba(0,0,0,0.1)
+    }
+    .stepper-horizontal li:not(:first-child):before {
+    position:relative;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    height:1px;
+    margin:.5rem 0 0 0;
+    content:"";
+    background-color:rgba(0,0,0,0.1);
+    min-width: 40px;
+    }
+    .stepper-horizontal li:hover {
+    /*! background-color:rgba(0,0,0,0.06) */
+    }
+    
+    
+    
+    
+    
+    
+    .stepper-horizontal>li:not(:last-of-type) {
+    margin-bottom:0 !important
+    }
+    .stepper-vertical {
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between
+    }
+    .stepper-vertical li {
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-align:start;
+    -ms-flex-align:start;
+    align-items:flex-start
+    }
+    .stepper-vertical li a {
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-item-align:start;
+    align-self:flex-start
+    }
+    .stepper-vertical li a .circle {
+    -webkit-box-ordinal-group:2;
+    -ms-flex-order:1;
+    order:1
+    }
+    .stepper-vertical li a .label {
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:column nowrap;
+    flex-flow:column nowrap;
+    -webkit-box-ordinal-group:3;
+    -ms-flex-order:2;
+    order:2;
+    margin-top:.2rem
+    }
+    .stepper-vertical li.completed a .label {
+    font-weight:500
+    }
+    .stepper-vertical li .step-content {
+    display:block;
+    padding:.94rem;
+    margin-top:0;
+    margin-left:3.13rem
+    }
+    .stepper-vertical li .step-content p {
+    font-size:.88rem
+    }
+    .stepper-vertical li:not(:last-child):after {
+    position:absolute;
+    top:3.44rem;
+    left:2.19rem;
+    width:1px;
+    height:calc(100% - 40px);
+    content:"";
+    background-color:rgba(0,0,0,0.1)
+    }
+    
+    .primary-color, ul.stepper li.active a .circle {
+    background-color: #4285f4 !important;
+    }
+    
+    
+    
+    
+    .Page-Title-Bar {
+        background: #f8f9fa;
+        padding:4px 10px 4px 32px !important;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+    .Ticket-Details .material-icons {
+        margin-right: 13px;
+    }
+    .Ticket-Details .Ticket-Value .material-icons {
+        margin-right: 7px !important;
+        position: relative;
+        top: 4px;
+    }
+    .Assigned-Date {
+        margin-right: 16px;
+    }
+    .Ticket-Description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        font-size: 13px !important;
+        color: #181c32 !important;
+    }
+    #Process-stepper ul.stepper li a {
+        padding: 0 10px;
+    }
+    .Page-Title {
+        width: 24%;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 0 15px 0 0;
+    }
+    #Process-stepper {
+        width: 66%;
+        background: #fff;
+        /*! max-width: 640px; */
+      }
+    #Process-stepper ul.stepper li a {
+        padding: 0 10px;
+    }
+    ul.stepper {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    #ProcessFlow_New_Left .card-body  {
+        padding: 0 1.5rem 1rem 1.5rem !important ;
+        }
+        .Tkts-toolbar-Right {
+            /*! margin-left: auto; */
+            width: 10%;
+            text-align: right;
+        }
+        .task-more-btns {
+            padding-top: 15px;
+            border-top: 1px solid #ebebeb;
+            padding-left: 50px;
+        }
+        #ProcessFlow_New_Left .card-body {
+            overflow: scroll;
+        }
+    
+        #ProcessFlow_New-container .nav.nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            width: 23.3%;
+            background: #fff;
+            z-index: 9;
+        }
+        /* #ProcessFlow_Content {
+            margin-top: 45px;
+            position: absolute;
+        } */
+        #ProcessFlow_New_Left .card-header {
+            background: white !important;
+            max-height: 46px;
+            border-right: 1px solid #f3f3f3;
+            border-top: 1px solid #f3f3f3;
+        }
+        #ProcessFlow_New_Left .nav.nav-tabs.nav-line-tabs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0;
+        }
+    
+        #ProcessFlow_New_Left .nav-link {
+            font-size: 1.1rem;
+            font-weight: bold;
+            /* padding: 0 25px 10px 25px; */
+            margin-right: 0;
+            }
+            #ProcessFlow_New_Left .nav-link .material-icons {
+                position: relative;
+                top: 6px;
+                font-size: 17px !important;
+            }
+    
+    
+            .Assigned-Date,.Assigned-By {
+                color: #6b6f85 !important;
+              }
+    
+    
+    
+    
+    
+            @media(max-width:768px) {
+                .Ticket-Value {	padding-left: 42px !important;}
+                #Tickets_details_view .card-header {	padding-inline: 0 !important;}
+                .Ticket-details-row {padding-left: 50px !important;}
+                .task-more-btns {	flex-wrap: wrap;	display: flex;	justify-content: space-around;}
+                #ProcessFlow_New_Left .Ticket-Value {	padding-left: 0 !important;}
+                ul.stepper {	margin-right: 0;	padding-inline: 15px !important;}
+                #Process-stepper {  width: 100%; order: 3; margin-block:5px;           }
+                .Page-Title{ width: 60%; }
+                #Process-stepper ul.stepper{ padding-inline: 0 !important; padding-block: 8px !important; }
+                #Process-stepper .stepper-horizontal li a .label{ margin-top: 0 !important; }
+                }
+
+
+
+
+                #Task_Activity_log .timeline {
+                    position: relative;
+                    width: 100%; /* Restrict the width on large screens */
+                    /*! margin: 0 auto; */ /* Center the content */
+                    padding: 15px;
+                }
+                #Task_Activity_log .timeline::after {
+					content: '';
+					position: absolute;
+					width: 1px;
+					background-color: #cfcfcf;
+					top: 40px;
+					bottom: 0;
+					left: 7%;
+					margin-left: -3px;
+					/* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+					z-index: 1;
+				}
+                #Task_Activity_log .container {
+                    position: relative;
+                    width: 100%;
+                    /*! min-height: 120px; */
+                    padding-block: 10px; margin: 0 !important;
+                }
+                #Task_Activity_log .container-left {
+                    left: 7%;
+                    padding-left: 0px;
+                    text-align: left;
+                }
+                #Task_Activity_log .container-right {
+                    left: 2%;
+                    padding-left: 130px;
+                    text-align: left;
+                }
+				#Task_Activity_log .content {
+					padding: 3px 30px;
+					/* background-color: white; */
+					position: relative;
+					border-radius: 0;
+					/* margin-top: 10px; */
+					width: 90%;
+					background: aliceblue;
+					border: 1px solid #e4eef7;
+				}
+                #Task_Activity_log .container .content::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 35px;
+                    width: 0;
+                    z-index: 1;
+                    border: medium solid white;
+                }
+                #Task_Activity_log .container-left .content::before {
+                    right: -10px;
+                    border-width: 10px 0 10px 10px;
+                    border-color: transparent transparent transparent white;
+                }
+                #Task_Activity_log .container-right .content::before {
+                    left: -10px;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent;
+                }
+                #Task_Activity_log .image {
+                  position: absolute;
+                  width: 40px;
+                  height: 40px;
+                  background-size: cover;
+                  background-position: center;
+                  /* border: solid 5px #ffffff; */
+                  border-radius: 50px;
+                  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+                  z-index: 2;
+              }
+                #Task_Activity_log .container-left .image {
+                    left: 0;
+                    margin-left: -31px;
+                    background-color: #fff;
+                }
+                #Task_Activity_log .container-right .image {
+                    left: 0;
+                    margin-left: 100px;
+                }
+                #Task_Activity_log .content span {
+                  color: #737373;
+                  font-size: 15px;
+                  font-weight: bold;
+              }
+                #Task_Activity_log .content h2 {
+                    font-size: 16px;
+                    padding-top: 5px;
+                }
+                #Task_Activity_log .content p {
+                  line-height: 1.6;
+                  padding-top: 5px;
+                  font-size: 15px; color: #222 !important; font-weight:normal !important;
+              }
+			  .badge-light-warning {
+	color: #f6701f;
+	background-color: #fff8dd;
+}
+                
+                @media screen and (max-width: 480px) {
+                   #Task_Activity_log .container {
+                        padding-left: 0px;
+                        padding-top: 0px;
+                        z-index: 3;
+                    }
+                   #Task_Activity_log .container .content::before {
+                        left: 25px;
+                        top: -10px;
+                        border: medium solid white;
+                        border-width: 0 10px 10px 10px;
+                        border-color: transparent transparent white transparent;
+                    }
+                }
+                
+                #Task_Activity_log .container.container-right::after {
+                  content: '';
+                  position: absolute;
+                  width: 2px;
+                  background-color: #f1f1f1;
+                  top: 0;
+                  bottom: 0;
+                  left: 6%;
+                  margin-left: 41px;
+                  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+                  z-index: 1;
+              }
+                /* #Task_Activity_log {
+                  width: 80%;
+              } */
+              
+              #Task_Activity_log .user-name,#Task_Activity_log .user-activity {
+                color: #333 !important;
+                font-size: 15px !important;
+              }
+             #Task_Activity_log .user-activity {
+	font-weight: normal !important;
+	margin-left: 7px;
+	margin-right: 14px;
+}
+              .Activiy-Date {
+                color: #3a3a3a !important;
+                font-weight: normal !important;
+                margin-right: 6px;
+              }
+            .activity-row-one {
+	margin-bottom: 2px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+              .Files-Attached-Wrapper {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	/* overflow-x: scroll; */
+}
+            .Files-Attached {
+	display: flex;
+	border: 1px solid #dfdfdf;
+	padding: 4px 15px;
+	border-radius: 6px;
+	margin-right: 15px;
+	align-items: center;
+	background: #fff;
+	margin-bottom: 5px;
+	background: #fff;
+}
+              
+              
+              .attached-filename {
+	color: #333;
+	/* font-weight: bold !important; */
+	font-size: 14px;
+	/* font-weight: 600; */
+}
+              .attached-filedetails span {
+                font-size: 12px !important;
+                color: #808080 !important;
+              }
+              .attached-filedetails .docsize {
+                margin-left: 15px;
+              }
+              .Files-Attached  .material-icons {
+                margin-left: 30px;
+                margin-top: 6px;
+                color: red !important;
+              }
+              .Files-Attached  .file-img {
+                width: 25px;
+                margin-right: 15px;
+              }
+              /* .task-description {
+                padding: 15px 54px 0 54px;
+              } */
+             .Task-details-wrap {
+	padding-left: 42px;
+	/* margin-block: 15px; */ margin-top: 15px;
+	position:relative;
+}
+              #Task_Activity_log .Task-details-wrap {
+                  padding-left: 0;
+                  margin-block: 0;
+              }
+              .Ticket-details-row .txt-bold {
+                  font-weight: bolder !important;
+                  font-size: 15px;
+                  color: #101010 !important;
+              }
+            #Task_Activity_log .container-left, #Task_Activity_log .container-right {
+	border-bottom: 1px dashed #9f9f9f;
+}
+              .bg-warning {
+                  background-color: #f66f1e !important;
+              }
+              .attached-filedetails span {
+                  font-size: 10px !important;
+                  font-weight: bold; display:none;
+              } 
+              #Task_Status.form-select.form-select-solid {
+                  background: green !important;
+              }
+
+             .page-Header {
+	display: flex;
+	justify-content: space-between;
+	/* margin-bottom: -12px !important; */
+}
+            #Task_Activity_log .content .Tasklog-toolbar-Right span {
+                color: inherit !important;
+                font-weight: normal;
+            }
+
+            .Tasklog-toolbar-Right {
+                position: absolute;
+                right: 1px;
+				top:1px;
+                /*transition: all ease 0.3s; top: 0; opacity: 0;*/
+            }
+
+            .Tasklog-toolbar-Right {
+                position: absolute;
+                right: 1px;
+                /* margin-left: 15px !important; */
+            }
+            #Task_Activity_log .content:hover .Tasklog-toolbar-Right {
+                opacity: 1;
+                right: 1;
+            }
+
+              @media screen and (max-width: 767px) {
+                #Task_Activity_log .timeline::after {
+                    left: 65px;
+                }
+                #Task_Activity_log .container {
+                    width: 100%;
+                    padding-left: 40px;
+                    padding-right: 0px;
+                    margin-top: 30px;
+                }
+                #Task_Activity_log .container:first-of-type {
+                    margin-top: 0px;
+                }
+               #Task_Activity_log .container-right {
+                    left: 5%;
+                }
+               #Task_Activity_log .container-left {
+                    text-align: left;
+                }
+               #Task_Activity_log .container .image {
+                    left:10px;
+                    top: 0px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+               #Task_Activity_log .container-left .content::before {
+                    left: -10px;
+                    right: auto;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent; display: none;
+                }
+
+
+
+                #Task_management_Wrapper .card-header {
+                    display: block;
+                    padding-inline: 0 !important;
+                }
+                .Files-Attached {  margin-right: 0; margin-bottom: 8px;}
+                .Ticket-details-row {
+                    padding-left: 35px !important;
+                }
+                .Task-details-wrap {
+                    padding-inline: 35px !important;
+                    margin-block: 15px;
+                }
+                #Task_Activity_log {
+                    width: 100%;
+                }
+                .Files-Attached-Wrapper {
+                    display: block;
+                }
+                #Task_Activity_log .container.container-right::after {                    
+                    width: 0px;
+                  
+                }
+
+                #Task_management_Wrapper .card-toolbar {
+                    margin-left: 34px !important;
+                }
+                #Task_management_Wrapper .card-body {
+                    padding: 0px !important;
+                    overflow: scroll;
+                    height: auto !important;
+                }
+                .page-Header {
+                    display: block !important;
+                   
+                }
+                #Task_Activity_log .Task-details-wrap {
+                    padding-inline: 0 !important;
+                }
+                #Task_management_Wrapper .card-title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+            }
+			
+			
+.Tasklog-toolbar-Right .btn.btn-sm.btn-icon {
+  width: 24px !important;
+  height: 24px;
+  border-radius: 4px;
+}
+#Taskmanagement_Body .Tasklog-toolbar-Right .btn.btn-sm.btn-icon .material-icons {
+  font-size: 17px !important;
+  position: relative;
+  top: 1px;
+}
+
+
+
+.task-description {
+	margin-bottom: 0px !important;
+	font-size: 15px;
+	line-height: 23px;
+	font-family: AxpM;
+	color: #495057;
+	width: 85%;
+	padding-left: 5px;
+	text-align: justify;
+}
+
+#hdr_watchers .symbol:nth-child(6n+1) .symbol-label {
+  background: #b3e099 !important;
+}
+#hdr_watchers .symbol:nth-child(6n+2) .symbol-label {
+  background: #fd9644 !important;
+}
+#hdr_watchers .symbol:nth-child(6n+3) .symbol-label {
+  background: #ffeaad !important;
+}
+#hdr_watchers .symbol:nth-child(6n+4) .symbol-label {
+  background: #d8c8b8 !important;
+}
+#hdr_watchers .symbol:nth-child(6n+5) .symbol-label {
+  background: #feb89f !important;
+}
+#hdr_watchers .symbol:nth-child(6n+6) .symbol-label {
+  background: #8ab8a8 !important;
+}
+
+#modal_watchers .symbol:nth-child(6n+1) .symbol-label {
+  background: #b3e099 !important;
+}
+#modal_watchers .symbol:nth-child(6n+2) .symbol-label {
+  background: #fd9644 !important;
+}
+#modal_watchers .symbol:nth-child(6n+3) .symbol-label {
+  background: #ffeaad !important;
+}
+#modal_watchers .symbol:nth-child(6n+4) .symbol-label {
+  background: #d8c8b8 !important;
+}
+#modal_watchers .symbol:nth-child(6n+5) .symbol-label {
+  background: #feb89f !important;
+}
+#modal_watchers .symbol:nth-child(6n+6) .symbol-label {
+  background: #8ab8a8 !important;
+}
+
+#hdr_watchers .symbol-label,#modal_watchers .symbol-label {
+	color: #000000 !important;
+}
+
+.Ticket-Label::after {
+	content: "--";
+	position: relative;
+	left: 12px;
+}
+#Task_Activity_log .user-activity::after {
+	content: "-";
+	position: relative;
+	left: 8px;
+}
+
+#hdr_watchers {
+	position: relative;
+	top: -3px;
+}
+
+
+#Task-Header-Desc {
+	right: -10px;
+	width: 10%;
+	opacity: 0;
+	display: block !important;
+}
+#Task_ID_Details:hover #Task-Header-Desc {
+	opacity: 1;
+	right: 0;
+	display: none !important;
+}
+#Task_Activity_log .Tasklog-toolbar-Right {
+	/*display: none;*/
+}
+#Task_Activity_log .symbol.symbol-35px .symbol-label {
+	width: 30px !important;
+	height: 30px !important;
+}
+
+#Task_Activity_log .image{
+	width: 35px !important;
+	height: 35px !important;
+}
+
+
+#modal_watchers div {
+  display: flex;
+}
+#modal_watchers span {
+  margin-right: 15px;
+}
+#modal_watchers .symbol {
+  padding-block: 10px;
+  border-bottom: 1px dashed #bcbcbc;
+  border-radius: 0;
+}
+#Taskmanagement_Body .modal-body {
+	 padding: 10px;
+	 /* max-height: 450px;  */
+	/* overflow: scroll;  */
+}
+
+#Taskmanagement_Body .modal-footer {
+	display: none;
+}
+#Taskmanagement_Body .modal-content {
+	padding-bottom: 5px !important;
+}
+
+.card-title #priorityBadge {
+	margin-left: 10px;
+	/* background: white !important; */
+}
+#modal_watchers div {
+	display: -webkit-inline-box;
+	min-width: 141px;
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+tmplugin
+
+JS:
+
+
+var jsonString = ""; 
+  
+ $(document).ready(function() {
+	var taskID = getQueryStringParameter("taskid");
+	if(taskID != "")
+		jsonString = AxCallSqlDataAPI('AXPKEY000000000005', { "Tasknumber" : taskID});
+    createTaskDetails(jsonString);
+});
+
+function createTaskDetails(jsonString)
+{	
+	//jsonString = jsonString.replace(/\\/g, '/');
+	resultHeaderJson = JSON.parse(jsonString);
+	
+	if(resultHeaderJson.ds_taskheader.rows.length > 0)
+	{
+		var TicketNumber = document.getElementById('hdr_tasknumber')
+		TicketNumber.textContent = 'Ticket #' + resultHeaderJson.ds_taskheader.rows[0].task_number;
+		
+		var Department = document.getElementById('hdr_department')
+		Department.textContent = resultHeaderJson.ds_taskheader.rows[0].department;
+		
+		var CreatedBy = document.getElementById('hdr_createdby')
+		CreatedBy.textContent = resultHeaderJson.ds_taskheader.rows[0].created_by;
+		
+		var TicketDescription = document.getElementById("hdr_task_description")
+		TicketDescription.textContent = resultHeaderJson.ds_taskheader.rows[0].task_description;
+
+		var CreatedOn = document.getElementById('hdr_createdon')
+		CreatedOn.textContent = resultHeaderJson.ds_taskheader.rows[0].created_on + ' ' + resultHeaderJson.ds_taskheader.rows[0].Task_time;
+		
+		var CompletionDate = document.getElementById('hdr_completiondate')
+		CompletionDate.textContent = resultHeaderJson.ds_taskheader.rows[0].timeline;
+		
+		var TaskStatus = document.getElementById('hdr_status')	
+		if(resultHeaderJson.ds_taskheader.rows[0].status)
+		{
+			if(resultHeaderJson.ds_taskheader.rows[0].status == "T")
+			{
+				TaskStatus.textContent = "Completed";
+				TaskStatus.classList.add('badge-success');
+			}			
+			else
+			{
+				TaskStatus.textContent = "Pending";
+				TaskStatus.classList.add('badge-danger');
+			}
+		}
+		if(resultHeaderJson.ds_taskheader.rows[0].priority)
+			updatePriority(resultHeaderJson.ds_taskheader.rows[0].priority);
+		
+		var HdrFilesListHTML = document.getElementById('dv_Files_Header')//
+		HdrFilesListHTML.innerHTML = getHeaderFilesHtml(resultHeaderJson.ds_taskheader.rows[0]);
+		
+		var HdrWatchersListHTML = document.getElementById('hdr_watchers')//
+		HdrWatchersListHTML.innerHTML = getHdrWatchersHtml(resultHeaderJson.ds_taskheader.rows[0]);
+		
+		if(resultHeaderJson.ds_taskheader.rows[0]["Update Status Button"] == "True")//Update Status Button
+		{
+			var loadURL = `../../aspx/tstruct.aspx?transid=alogm&act=open&task_number=${resultHeaderJson.ds_taskheader.rows[0]["task_number"]}&parent_action_number=${resultHeaderJson.ds_taskheader.rows[0]["action_status_number"]}`;
+			$('#dv_Files_Header').after(`<div class=" mb-3"><button onclick="openTaskUpdate('${loadURL}')" style="float:right;" class="btn btn-sm btn-primary">Update</button> </div>`);
+		}
+			
+
+		var mainDiv = document.getElementById('body_Container')
+		if (!resultHeaderJson.ds_activityfooter.rows) {
+			mainDiv.innerhtml = '<p>No Task Found</p>'
+			console.log("Element with ID 'taskupdate' not found.");
+		} else {
+
+			for (var i = 0; i < resultHeaderJson.ds_activityfooter.rows.length; i++) {
+				var initial = resultHeaderJson.ds_activityfooter.rows[i]["Assign From"];
+				var alignClass = "container container-left";
+				var activity = `<span class="user-activity">Created the task</span>`;
+				if(i!=0)	
+				{				
+					alignClass = "container container-left";
+					activity = `<span class="user-activity">assigned to <b>${resultHeaderJson.ds_activityfooter.rows[i]["assign_to"]}</b></span>`
+				}
+				var filesHTML = "";
+				if(resultHeaderJson.ds_activityfooter.rows[i]["axpfile_file"])
+				{				
+					filesHTML = getFilesHtml(resultHeaderJson.ds_activityfooter.rows[i]);
+				}
+				var editButtonHTML = "";
+				if(resultHeaderJson.ds_activityfooter.rows[i]["edit_flag"] == "True")//Update Status Button
+				{
+					var loadURL = `../../aspx/tstruct.aspx?transid=alogm&act=load&recordid=${resultHeaderJson.ds_activityfooter.rows[i]["recordid"]}`;
+					editButtonHTML = `<div class="Tasklog-toolbar-Right"><button onclick="openTaskUpdate('${loadURL}')" class="btn btn-sm btn-primary">Edit</button> </div>`;
+				}
+				var editHtml= `../../aspx/tstruct.aspx?transid=alogm&act=open&recordid=${resultHeaderJson.ds_activityfooter.rows[i]["recordid"]}`;
+				var replyHtml = `../../aspx/tstruct.aspx?transid=alogm&act=open&task_number=${resultHeaderJson.ds_activityfooter.rows[i]["task_number"]}&parent_action_number=${resultHeaderJson.ds_activityfooter.rows[i]["child_action_number"]}&action=Reply`;
+				var forwardHtml = `../../aspx/tstruct.aspx?transid=alogm&act=open&task_number=${resultHeaderJson.ds_activityfooter.rows[i]["task_number"]}&parent_action_number=${resultHeaderJson.ds_activityfooter.rows[i]["child_action_number"]}&action=Forward`;
+				
+				$('#body_Container').append(`<div class="${alignClass}">
+												   <div class="image User-DP-Noname">
+													  <div class="symbol symbol-35px symbol-circle initialized" data-bs-toggle="tooltip" title=""
+														 data-bs-original-title="${initial}">
+														 <span class="symbol-label bg-warning text-inverse-warning fw-bold">${initial[0]}</span>
+													  </div>
+												   </div>
+												   <div class="content">
+													  <div class=" d-flex activity-row-one">
+														 <span class="user-name"> ${initial}</span>
+														 ${activity}
+														 
+														 <span class="Activiy-Date">${resultHeaderJson.ds_activityfooter.rows[i]["modifiedon"]}</span>
+														 
+													  </div>													  
+													  <!--<div class=" d-flex activity-row-one">
+														 
+														 <span class="Activiy-Time">6:30 PM</span>
+													  </div>-->
+													  <div class="row Task-details-wrap">
+														 <p class="task-description moretext" style="margin-bottom:0px !important;">
+															${resultHeaderJson.ds_activityfooter.rows[i]["t_comments"]}
+														 </p>
+														 <a class="moreless-button" href="#">Read more</a>
+														 <div class=" Files-Attached-Wrapper">
+															${filesHTML}
+														 </div>
+													  </div>
+													  ${editButtonHTML}
+												   </div>												   
+												</div>`);
+			}
+		}
+		initReadMore();
+	}	
+}
+
+function getFilesHtml(rowJson){
+	var returnHtml = "";
+	var filesArray = rowJson["axpfile_file"].split(',');	
+	$.each(filesArray, function (index, value) {
+		var fileType = getFileType(value);
+		var iconClass = getFileImgHTML(fileType);
+		var attachmentURL = rowJson["axpfilepath_file"] + value;
+		if(value != "")
+		{
+			returnHtml += `<div class="Files-Attached ">
+						   <!--begin::Icon-->	
+						   ${iconClass}						   
+						   <!--end::Icon-->                     
+						   <!--begin::Info-->
+						   <div class="ms-1 fw-semibold">
+							  <!--begin::Desc-->							  
+							  <a class="attached-filename" target="_blank" href="${attachmentURL}">${value}</a>
+							  <!--end::Desc-->                     
+							  <!--begin::Number-->
+							  <div class="attached-filedetails">
+								 <span class="doctype">${fileType}</span>
+								 <!--<span class="docsize">1.9mb</span>-->
+							  </div>
+							  <!--end::Number-->
+						   </div>
+						   <a class="attached-filename" target="_blank" href="${attachmentURL}">
+							   <span
+								  class="material-icons material-icons-style material-icons-2 text-danger">cloud_download</span>
+							</a>
+						   <!--begin::Info-->
+						</div>`;
+		}
+		
+    });	
+	return returnHtml;
+}
+function getHeaderFilesHtml(rowJson){
+	var returnHtml = "";
+	var filesArray = rowJson["axpfile_file"].split(',');	
+	$.each(filesArray, function (index, value) {
+		if(value != "")
+		{
+			var fileType = getFileType(value);
+			var iconClass = getFileImgHTML(fileType);
+			var attachmentURL = rowJson["axpfilepath_file"] + value;
+			returnHtml += `<div class="Files-Attached ">
+							   <!--begin::Icon-->	
+							   ${iconClass}						   
+							   <!--end::Icon-->                     
+							   <!--begin::Info-->
+							   <div class="ms-1 fw-semibold">
+								  <!--begin::Desc-->							  
+								  <a class="attached-filename" target="_blank" href="${attachmentURL}">${value}</a>
+								  <!--end::Desc-->                     
+								  <!--begin::Number-->
+								  <div class="attached-filedetails">
+									 <span class="doctype">${fileType}</span>
+									 <!--<span class="docsize">1.9mb</span>-->
+								  </div>
+								  <!--end::Number-->
+							   </div>
+							   <a class="attached-filename" target="_blank" href="${attachmentURL}">
+									<span
+									  class="material-icons material-icons-style material-icons-2 text-danger">cloud_download</span>
+								  </a>
+							   <!--begin::Info-->
+							</div>`;
+		}
+		
+    });	
+	return returnHtml;
+}
+function getHdrWatchersHtml(rowJson){
+	var returnHtml = "";
+	var returnHtmlModal = "";
+	var filesArray = rowJson["Task users"].split(',');
+	var count = filesArray.length;
+	$.each(filesArray, function (index, value) {	
+		var init_name = $.trim(value[0]);
+      	if(init_name != "")
+          {
+            if(index <= 2)
+			returnHtml += `<div class="symbol symbol-25px symbol-circle initialized" data-bs-toggle="tooltip" title="" data-bs-original-title="${value[0]}">
+							<span class="symbol-label bg-warning text-inverse-warning fw-bold">${init_name}</span>
+						</div> `;
+          }		
+    });
+	if(count > 3)
+		returnHtml += `<a href="#" class="symbol symbol-25px symbol-circle" data-bs-toggle="modal" data-bs-target="#kt_modal_view_users"> <span class="symbol-label bg-light text-gray-400 fs-8 fw-bold">+${count - 3}</span></a>`;
+	
+	//Create Modal Content
+	$.each(filesArray, function (index, value) {		
+		var firstChar = value.charAt(0);
+		var valuestring = value.slice(1);
+		returnHtmlModal += `<div class="symbol symbol-25px symbol-circle initialized" data-bs-toggle="tooltip" title="" data-bs-original-title="${firstChar}">
+							<span class="fw-bold badge badge-info" style="font-size:1rem !important;">${value}</span> 
+						</div>   `;
+    });
+	var ModalWatchers = document.getElementById('modal_watchers')
+	ModalWatchers.innerHTML = returnHtmlModal;
+	
+	return returnHtml;
+}
+function initReadMore() {
+    // Get all elements with the "moretext" class
+    var moreTextElements = document.querySelectorAll('.moretext');
+
+    moreTextElements.forEach(function (moreText, index) {
+        // Save the initial height when the page loads for each element
+        var initialHeight = moreText.clientHeight;
+
+        // Get the corresponding "Read more" button
+        var moreLessButton = moreText.nextElementSibling;
+
+        // Initial check and setup
+        if (moreText.scrollHeight > moreText.clientHeight) {
+            moreLessButton.style.display = 'inline-block';
+            moreText.style.maxHeight = initialHeight + 'px'; // Set initial max height
+        } else {
+            moreLessButton.style.display = 'none'; // Hide button if content is not overflowing
+        }
+
+        // Toggle between two lines and full height and adjust max-height accordingly
+        moreLessButton.addEventListener('click', function () {
+            // Get the computed style for the moreText element
+            var computedStyle = window.getComputedStyle(moreText);
+
+            if (computedStyle.maxHeight === 'none' || computedStyle.maxHeight === initialHeight + 'px') {
+                moreText.style.maxHeight = moreText.scrollHeight + 'px'; // Expand to full height
+                moreLessButton.textContent = 'Read less';
+            } else {
+                moreText.style.maxHeight = initialHeight + 'px'; // Set back to initial height
+                moreLessButton.textContent = 'Read more';
+            }
+        });
+    });
+}
+function getIconClass(fileType) {
+    switch (fileType) {
+        case 'pdf':
+            return 'description';
+        case 'png':
+            return 'image';
+        case 'doc':
+        case 'docx':
+            return 'description';
+        case 'txt':
+            return 'description';
+        case 'xls':
+        case 'xlsx':
+            return 'description';
+        case 'ppt':
+        case 'pptx':
+            return 'slideshow';
+        case 'zip':
+            return 'archive';
+        case 'mp3':
+            return 'audiotrack';
+        case 'mp4':
+            return 'videocam';
+        default:
+            return 'insert_drive_file'; // Default icon for unknown file types
+    }
+}
+
+function getFileImgHTML(fileType) {
+    switch (fileType) {
+        case 'pdf':
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">description</i>';
+		case 'jpeg':
+		case 'jpg':
+        case 'png':
+            return '<img src="../images/images.svg" class="file-img" />';
+        case 'doc':
+        case 'docx':
+            return '<img src="../images/word.svg" class="file-img" />';
+        case 'txt':
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">description</i>';
+        case 'xls':
+        case 'xlsx':
+            return '<img src="../images/xl.svg" class="file-img"/>';
+        case 'ppt':
+        case 'pptx':
+            return '<img src="../images/ppt.svg" class="file-img"/>';
+        case 'zip':
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">archive</i>';
+        case 'mp3':
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">audiotrack</i>';
+        case 'mp4':
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">videocam</i>';
+        default:
+            return '<i style="margin:0px !important; font-size: 40px !important; " class="material-icons">insert_drive_file</i>'; // Default icon for unknown file types
+    }
+}
+function getFileType(fileName) {
+    // Split the file name into an array based on the dot separator
+    var parts = fileName.split('.');
+
+    // Get the last part of the array, which is the file extension
+    var fileExtension = parts[parts.length - 1];
+
+    // Convert the file extension to lowercase (optional, for consistency)
+    return fileExtension.toLowerCase();
+}
+function getQueryStringParameter(name) {
+    // Remove the "?" character from the beginning of the query string
+    var queryString = window.location.search.substring(1);
+
+    // Split the query string into an array of key-value pairs
+    var queryParams = queryString.split("&");
+
+    // Loop through each key-value pair
+    for (var i = 0; i < queryParams.length; i++) {
+        // Split the key and value
+        var pair = queryParams[i].split("=");
+
+        // Check if the current key matches the one we're looking for
+        if (pair[0] === name) {
+            // Return the decoded value
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    // Return null if the parameter is not found
+    return null;
+}
+function updatePriority(priority) {
+    var priorityBadge = document.getElementById('priorityBadge');
+
+    // Remove existing priority classes
+    priorityBadge.classList.remove('badge-danger', 'badge-warning', 'badge-success', 'badge-light-danger');
+	priority = $.trim(priority);
+    // Update priority text and add corresponding class		
+    switch (priority) {
+        case 'Low':     
+			priorityBadge.innerHTML = `<span
+                                         class="material-icons material-icons-style material-icons-2 text-success me-2 ">flag</span>${priority}</span>`;
+            priorityBadge.classList.add('badge-success');
+			priorityBadge.classList.add('badge-light-success');
+            break;
+		case 'Neutral':
+        case 'Medium':
+			priorityBadge.innerHTML = `<span
+                                         class="material-icons material-icons-style material-icons-2 text-warning me-2 ">flag</span>${priority}</span>`;
+            priorityBadge.classList.add('badge-warning');
+			priorityBadge.classList.add('badge-light-warning');
+            break;
+		case 'Critical':
+        case 'High':
+			priorityBadge.innerHTML = `<span class="material-icons material-icons-style material-icons-2 text-danger me-2 ">flag</span>${priority}</span>`;
+            priorityBadge.classList.add('badge-danger');
+			priorityBadge.classList.add('badge-light-danger');
+            break;
+        default:
+            priorityBadge.innerHTML = `<span class="material-icons material-icons-style material-icons-2 text-info me-2 ">flag</span>${priority}</span>`;
+            priorityBadge.classList.add('badge-info');
+			priorityBadge.classList.add('badge-light-info');
+            break;
+    }
+}
+function openTaskUpdate(url){
+	var modal_id = "mod_UpdateTask";
+	let popupHtml = `<iframe id="updatetask" name="updatetask" class="col-12 flex-column-fluid w-100 h-100" src="${url}" frameborder="0" allowtransparency="True"></iframe>`;
+
+	let myModal = new BSModal(modal_id, "", popupHtml,
+				(opening) => { }, (closing) => { }
+			);
+
+	myModal.changeSize("fullscreen");
+	myModal.hideHeader();
+	myModal.hideFooter();
+	myModal.showFloatingClose();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
