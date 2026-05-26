@@ -1038,7 +1038,7 @@ DROP TYPE axi_firesql_tab
 >>
 
 <<
-DROP TYPE axi_firesql_obj;
+DROP TYPE axi_firesql_obj
 >>
 
 
@@ -1295,7 +1295,7 @@ DROP TYPE tab_getstructlist
 >>
 
 <<
-DROP TYPE obj_getstructlist;
+DROP TYPE obj_getstructlist
 >>
 
 
