@@ -1067,8 +1067,8 @@ CREATE OR REPLACE FUNCTION axi_firesql_v2 (
 )
 RETURN axi_firesql_tab PIPELINED
 AS
-    v_sql          VARCHAR2(32767);
-
+    --v_sql          VARCHAR2(32767);
+    v_sql          CLOB;
     v_pair         VARCHAR2(4000);
     v_param_name   VARCHAR2(1000);
     v_param_value  VARCHAR2(4000);
